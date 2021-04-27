@@ -27,25 +27,41 @@ export class CuesService {
         name: 'Cape Verde Escudo',
         flag: 'https://restcountries.eu/data/cpv.svg',
       }
-    }
-    // {
-    //   cueId: 'Guyana-Congo',
-    //   base: {
-    //     countryName: 'Guyana',
-    //     currencyCode: 'GYD',
-    //     name: 'Guyanese Dollar',
-    //     eurPrice: 100,
-    //     flag: 'https://flagcdn.com/h240/gy.jpg'
-    //   },
-    //   target: {
-    //     countryName: 'Democratic Republic of Congo',
-    //     currencyCode: 'CDF',
-    //     name: 'Congolese Franc',
-    //     eurPrice: 5300.19,
-    //     flag: 'https://flagcdn.com/h240/cd.jpg'
-    //   }
-    // },
-
+    },
+    {
+      cueId: 'Guyana-Congo',
+      base: {
+        countryName: 'Guyana',
+        currencyCode: 'GYD',
+        alpha3Code: 'GUY',
+        name: 'Guyanese Dollar',
+        flag: 'https://restcountries.eu/data/guy.svg'
+      },
+      target: {
+        countryName: 'Cape Verde',
+        currencyCode: 'CDF',
+        alpha3Code: 'COD',
+        name: 'Congolese Franc',
+        flag: 'https://restcountries.eu/data/cod.svg',
+      }
+    },
+    {
+      cueId: 'Guyana-Congo',
+      base: {
+        countryName: 'Guyana',
+        currencyCode: 'GYD',
+        alpha3Code: 'GUY',
+        name: 'Guyanese Dollar',
+        flag: 'https://restcountries.eu/data/guy.svg'
+      },
+      target: {
+        countryName: 'Cape Verde',
+        currencyCode: 'CDF',
+        alpha3Code: 'COD',
+        name: 'Congolese Franc',
+        flag: 'https://restcountries.eu/data/cod.svg',
+      }
+    },
     // {
     //   cueId: 'Franc-Tenge',
     //   base: {

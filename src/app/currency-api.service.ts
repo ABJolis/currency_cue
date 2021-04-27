@@ -14,7 +14,8 @@ export class CurrencyApiService {
 
   private url = 'https://restcountries.eu/rest/v2';
 
-  private currUrl = 'http://free.currconv.com/api/v7/convert?q=';
+  //private currUrl = 'http://free.currconv.com/api/v7/convert?q=';
+  private currUrl = 'https://prepaid.currconv.com/api/v7/convert?q=';
 
   constructor(private http: HttpClient) { }
 

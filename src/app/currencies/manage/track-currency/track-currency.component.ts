@@ -25,9 +25,6 @@ export class TrackCurrencyComponent implements OnInit {
 
 
   constructor(
-    // private modalCtrl: ModalController,
-    // private navCtrl: NavController,
-    // private route: ActivatedRoute,
     private currencyService: CurrencyApiService,
     ) {}
 
