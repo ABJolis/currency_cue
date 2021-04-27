@@ -16,8 +16,6 @@ export class CurrencyApiService {
 
   private currUrl = 'http://free.currconv.com/api/v7/convert?q=';
 
-
-
   constructor(private http: HttpClient) { }
 
   getAllCountries(): Observable<Currency[]> {
@@ -31,6 +29,10 @@ export class CurrencyApiService {
     return this.http.get(`${this.url}/alpha/${code}`)
       .pipe(map(country => Currency.parse(country)));
   }
+
+  // addToCue(currency: Currency): Observable<Currency> {
+  //   return this.http.post<Currency>(this.getCurrency, currency, this.http);
+  // }
 
    getExchangeRate(from: string, to: string) {
     return this.http.get(

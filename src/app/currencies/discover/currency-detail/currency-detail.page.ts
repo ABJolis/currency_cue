@@ -40,6 +40,10 @@ export class CurrencyDetailPage implements OnInit {
   });
 }
 
+addToCue(mode: 'select') {
+  console.log('Adding to cue!');
+}
+
 onTrackCurrency() {
   this.actionSheetCtrl.create({
     buttons: [
@@ -64,10 +68,6 @@ onTrackCurrency() {
     actionSheetEl.present();
   });
 
-}
-
-addToCue(mode: 'select') {
-  console.log('Adding to cue!');
 }
 
 openTrackingModal(mode: 'select') {

@@ -2,6 +2,7 @@
 import { Injectable } from '@angular/core';
 
 import { Currency } from './currency.model';
+import { CurrencyApiService } from '../currency-api.service';
 
 import { Cue } from './cues.model';
 
@@ -10,29 +11,23 @@ import { Cue } from './cues.model';
 export class CuesService {
 
   private _cues: Cue[] = [
-
-    // {
-    //   cueId: 'Krona-Escude',
-    //   base: {
-    //     countryName: 'Sweden',
-    //     currencyCode: 'SEK',
-    //     //flagId: 'se',
-    //     name: 'Swedish Krona',
-    //     eurPrice: 1,
-    //     flag: 'https://flagcdn.com/h240/se.jpg',
-    //     //currUrl: 'http://data.fixer.io/api/latest?access_key=efa9c75ed4c7ee156777fe1240360ac9&base=EUR&symbols=SEK'
-    //   },
-    //   target: {
-    //     countryName: 'Cape Verde',
-    //     currencyCode: 'CVE',
-    //     //flagId: 'cv',
-    //     name: 'Cape Verde Escudo',
-    //     eurPrice: 53.79,
-    //     flag: 'https://flagcdn.com/h240/cv.jpg',
-    //     currUrl: 'http://data.fixer.io/api/latest?access_key=efa9c75ed4c7ee156777fe1240360ac9&base=EUR&symbols=CVE'
-    //   }
-    // },
-
+    {
+      cueId: 'Krona-Escude',
+      base: {
+        countryName: 'Sweden',
+        currencyCode: 'SEK',
+        alpha3Code: 'SWE',
+        name: 'Swedish Krona',
+        flag: 'https://restcountries.eu/data/swe.svg'
+      },
+      target: {
+        countryName: 'Cape Verde',
+        currencyCode: 'CVE',
+        alpha3Code: 'CPV',
+        name: 'Cape Verde Escudo',
+        flag: 'https://restcountries.eu/data/cpv.svg',
+      }
+    }
     // {
     //   cueId: 'Guyana-Congo',
     //   base: {
