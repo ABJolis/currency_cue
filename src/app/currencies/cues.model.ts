@@ -8,8 +8,9 @@ export class Cue
 
     public base: Currency,
 
-    public target: Currency
+    public target: Currency,
 
+    public cueRate: string
 
   ) {}
 }

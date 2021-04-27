@@ -7,6 +7,7 @@ import { Cue } from '../../cues.model';
 import { Currency } from '../../currency.model';
 import { Exchange } from '../../currency.model';
 import { TrackCurrencyComponent } from '../../../currencies/manage/track-currency/track-currency.component';
+import { ManagePage } from '../../manage/manage.page';
 
 @Component({
   selector: 'app-currency-detail',

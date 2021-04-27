@@ -21,12 +21,13 @@ export class CuesService {
         flag: 'https://restcountries.eu/data/swe.svg'
       },
       target: {
-        countryName: 'Cape Verde',
-        currencyCode: 'CVE',
-        alpha3Code: 'CPV',
-        name: 'Cape Verde Escudo',
-        flag: 'https://restcountries.eu/data/cpv.svg',
-      }
+        countryName: 'Bhutan',
+        currencyCode: 'BTN',
+        alpha3Code: 'BTN',
+        name: 'Bhutanese Ngultrum',
+        flag: 'https://restcountries.eu/data/btn.svg',
+      },
+        cueRate: 'SEK 1.00 = BTN 8.89'
     },
     {
       cueId: 'Guyana-Congo',
@@ -43,42 +44,27 @@ export class CuesService {
         alpha3Code: 'COD',
         name: 'Congolese Franc',
         flag: 'https://restcountries.eu/data/cod.svg',
-      }
+      },
+      cueRate: 'GYD 1.00 = CDF 9.56'
     },
     {
-      cueId: 'Guyana-Congo',
+      cueId: 'Franc-Tenge',
       base: {
-        countryName: 'Guyana',
-        currencyCode: 'GYD',
-        alpha3Code: 'GUY',
-        name: 'Guyanese Dollar',
-        flag: 'https://restcountries.eu/data/guy.svg'
+        countryName: 'Kazakhstan',
+        currencyCode: 'KZT',
+        alpha3Code: 'KAZ',
+        name: 'Kazakhstani Tenge',
+        flag: 'https://restcountries.eu/data/kaz.svg',
       },
       target: {
-        countryName: 'Cape Verde',
-        currencyCode: 'CDF',
-        alpha3Code: 'COD',
-        name: 'Congolese Franc',
-        flag: 'https://restcountries.eu/data/cod.svg',
-      }
-    },
-    // {
-    //   cueId: 'Franc-Tenge',
-    //   base: {
-    //     countryName: 'Comoros',
-    //     currencyCode: 'KMF',
-    //     name: 'Comorian Franc',
-    //     eurPrice: 10,
-    //     flag: 'https://flagcdn.com/h240/km.jpg'
-    //   },
-    //   target: {
-    //     countryName: 'Kazakhstan',
-    //     currencyCode: 'KZT',
-    //     name: 'Kaazakhstani Tenge',
-    //     eurPrice: 530.79,
-    //     flag: 'https://flagcdn.com/h240/kz.jpg'
-    //   }
-    //}
+        countryName: 'Comoros',
+        currencyCode: 'KMF',
+        alpha3Code: 'COM',
+        name: 'Comorian Franc',
+        flag: 'https://restcountries.eu/data/com.svg'
+      },
+      cueRate: 'KZT 1.00 = KMF 0.95'
+    }
 
  ];
 

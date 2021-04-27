@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavController } from '@ionic/angular';
+
 import { CurrencyApiService } from '../../currency-api.service';
 import { CuesService } from '../cues.service';
 import { Cue } from '../cues.model';
 import { Currency } from '../currency.model';
 import { IonItemSliding } from '@ionic/angular';
+import { Exchange } from '../currency.model';
 
 @Component({
   selector: 'app-manage',
@@ -15,7 +17,8 @@ import { IonItemSliding } from '@ionic/angular';
 export class ManagePage implements OnInit {
 
   currency: Currency;
-
+  exchange: Exchange;
+  cues: Cue[];
   cuedCurrencies: Cue[];
 
   constructor(
@@ -27,13 +30,19 @@ export class ManagePage implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(paramMap => {
-      // if (!paramMap.has('currencyCode)) {
-        // this.navCtrl.navigateBack('/currencies/tabs/discover');
-        // return;
-        // }
-      //this.currency = this.currencyService.getCurrency(paramMap.get('currencyCode'));
+      // if (!paramMap.has('currencyCode')) {
+      //   this.navCtrl.navigateBack('/currencies/tabs/discover');
+      //   return;
+      //   }
     });
     this.cuedCurrencies = this.cuesService.cues;
+    // this.currencyService.getCurrency(
+    //   paramMap.get('currencyCode'))
+    //   .subscribe(c => {
+    //     this.currency = c;
+    //     this.currencyService.getExchangeRate(this.currency.currencyCode, )
+    //   })
+    // )
   }
 
   onCancelCue(cuesId: string, slidingEl: IonItemSliding) {
