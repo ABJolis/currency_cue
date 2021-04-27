@@ -8,10 +8,9 @@
 </ion-header>
 
 <ion-content class="ion-padding" *ngIf="this.currency">
-  <h1>{{ this.currency.countryName }} {{ this.currency.currencyCode }}</h1>
+  <h1 class="ion-text-center">{{ this.currency.countryName }} {{ this.currency.name }}</h1>
 <ion-grid>
 <ion-row>
-  <h2>{{ this.currency.name }}</h2>
   <ion-col size="12" size-sm="6" class="ion-text-center">
     <ion-card>
       <ion-img [src]="this.currency.flag"></ion-img>
@@ -20,10 +19,9 @@
 </ion-row>
 
 <ion-row>
-  <ion-col>
-    <h3>Price to GBP: </h3>
-    <h3>{{this.exchange.exchangeRate}}</h3>
+  <ion-col class="ion-text-center">
+    <h3>{{this.exchange.exchangeRate}} {{this.currency.currencyCode}} = 1.00 GBP</h3>
+    <ion-button color="primary" margin (click)="onTrackCurrency()">Track Currency</ion-button>
   </ion-col>
 </ion-row>
 
-<ion-button color="primary" margin (click)="onTrackCurrency()">Track Currency</ion-button>
