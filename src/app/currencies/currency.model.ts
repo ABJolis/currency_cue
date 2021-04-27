@@ -28,11 +28,12 @@ export class Exchange
   exchangeRate: number;
 
     static parse(exchData) {
+      const thing: any = Object.values(exchData.results)[0];
       const dataObj = {
-        pair: exchData.results.query.id,
-        baseCurr: exchData.results.query.fr,
-        targetCurr: exchData.results.query.to,
-        exchangeRate: Object.values(exchData.results)
+        pair: thing?.id,
+        baseCurr: thing?.fr,
+        targetCurr: thing?.to,
+        exchangeRate: thing?.val
       };
       return Object.assign(new Exchange(), dataObj);
     }

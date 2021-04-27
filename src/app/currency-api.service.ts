@@ -35,12 +35,11 @@ export class CurrencyApiService {
   // }
 
    getExchangeRate(from: string, to: string) {
+     console.log('from and to: ', from, to);
     return this.http.get(
-      //`${this.currUrl}EUR_USD&apiKey=${this.apiKey}`
       `${this.currUrl}${from}_${to}&apiKey=${environment.API_KEY}`
       )
       .pipe(map(exRate => Exchange.parse(exRate)));
-console.log('DUDE');
 }
 }
 

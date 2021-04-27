@@ -34,9 +34,11 @@ export class CurrencyDetailPage implements OnInit {
       }
       this.currencyService.getCurrency(
         paramMap.get('currencyCode'))
-        .subscribe(c => this.currency = c);
-      this.currencyService.getExchangeRate('EUR', 'USD')
-      .subscribe(x => this.exchange = x);
+        .subscribe(c => {
+          this.currency = c;
+          this.currencyService.getExchangeRate(this.currency.currencyCode, 'USD')
+          .subscribe(x => this.exchange = x);
+        });
   });
 }
 
