@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>My Currency Cues</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let cues of cuedCurrencies">
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-col>
+          <ion-item-divider>
+            <h5>
+              {{ cues.cueId }}
+            </h5>
+          </ion-item-divider>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <h6>{{ cues.base.title }}</h6>
+            <ion-avatar>
+              <ion-img [src]="cues.base.flagUrl"></ion-img>
+            </ion-avatar>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <h6>{{ cues.target.title }}</h6>
+            <ion-avatar>
+              <ion-img [src]="cues.target.flagUrl"></ion-img>
+            </ion-avatar>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+  </ion-content>
+

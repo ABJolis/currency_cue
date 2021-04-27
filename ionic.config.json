@@ -1,0 +1,7 @@
+{
+  "name": "CurrencyCue",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

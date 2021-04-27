@@ -1,0 +1,392 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ selectedCurrency.name }}</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onCancel()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+<ion-grid>
+<ion-row>
+  <!-- <ion-col class="ion-text-start">
+    <h6>{{ selectedCurrency.name }}</h6>
+  <ion-thumbnail>
+    <ion-img [src]="selectedCurrency.flag"></ion-img>
+  </ion-thumbnail>
+  </ion-col> -->
+</ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-label>Base Amount</ion-label>
+      <ion-item>
+        <ion-input inputmode="numeric" type="number" min="0.000001" value="number" placeholder="Enter Amount"></ion-input>
+      </ion-item>
+      <ion-label>Base Currency</ion-label>
+      <ion-item>
+        <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
+          <ion-select-option value="AED">AED</ion-select-option>
+          <ion-select-option value="AFN">AFN</ion-select-option>
+          <ion-select-option value="ALL">ALL</ion-select-option>
+          <ion-select-option value="AMD">AMD</ion-select-option>
+          <ion-select-option value="ANG">ANG</ion-select-option>
+          <ion-select-option value="AOA">AOA</ion-select-option>
+          <ion-select-option value="ARS">ARS</ion-select-option>
+          <ion-select-option value="AUD">AUD</ion-select-option>
+          <ion-select-option value="AWG">AWD</ion-select-option>
+          <ion-select-option value="AZN">AZN</ion-select-option>
+          <ion-select-option value="BAM">BAM</ion-select-option>
+          <ion-select-option value="BBD">BBD</ion-select-option>
+          <ion-select-option value="BDT">BDT</ion-select-option>
+          <ion-select-option value="BGN">BGN</ion-select-option>
+          <ion-select-option value="BHD">BHD</ion-select-option>
+          <ion-select-option value="BIF">BIF</ion-select-option>
+          <ion-select-option value="BMD">BMD</ion-select-option>
+          <ion-select-option value="BND">BND</ion-select-option>
+          <ion-select-option value="BOB">BOB</ion-select-option>
+          <ion-select-option value="BRL">BRL</ion-select-option>
+          <ion-select-option value="BSD">BSD</ion-select-option>
+          <ion-select-option value="BTC">BTC</ion-select-option>
+          <ion-select-option value="BTN">BTN</ion-select-option>
+          <ion-select-option value="BWP">BWP</ion-select-option>
+          <ion-select-option value="BYN">BYN</ion-select-option>
+          <ion-select-option value="BYR">BYR</ion-select-option>
+          <ion-select-option value="BZD">BZD</ion-select-option>
+          <ion-select-option value="CAD">CAD</ion-select-option>
+          <ion-select-option value="CDF">CDF</ion-select-option>
+          <ion-select-option value="CHF">CHF</ion-select-option>
+          <ion-select-option value="CLF">CLF</ion-select-option>
+          <ion-select-option value="CLP">CLP</ion-select-option>
+          <ion-select-option value="CNY">CNY</ion-select-option>
+          <ion-select-option value="COP">COP</ion-select-option>
+          <ion-select-option value="CRC">CRC</ion-select-option>
+          <ion-select-option value="CUC">CUC</ion-select-option>
+          <ion-select-option value="CUP">CUP</ion-select-option>
+          <ion-select-option value="CVE">CVE</ion-select-option>
+          <ion-select-option value="CZK">CZK</ion-select-option>
+          <ion-select-option value="DJF">DJF</ion-select-option>
+          <ion-select-option value="DKK">DKK</ion-select-option>
+          <ion-select-option value="DOP">DOP</ion-select-option>
+          <ion-select-option value="DZD">DZD</ion-select-option>
+          <ion-select-option value="EGP">EGP</ion-select-option>
+          <ion-select-option value="ERN">ERN</ion-select-option>
+          <ion-select-option value="ETB">ETB</ion-select-option>
+          <ion-select-option value="EUR">EUR</ion-select-option>
+          <ion-select-option value="FJD">FJD</ion-select-option>
+          <ion-select-option value="FKP">FKP</ion-select-option>
+          <ion-select-option value="GBP">GBP</ion-select-option>
+          <ion-select-option value="GEL">GEL</ion-select-option>
+          <ion-select-option value="GGP">GGP</ion-select-option>
+          <ion-select-option value="GHS">GHS</ion-select-option>
+          <ion-select-option value="GIP">GIP</ion-select-option>
+          <ion-select-option value="GMD">GMD</ion-select-option>
+          <ion-select-option value="GNF">GNF</ion-select-option>
+          <ion-select-option value="GTQ">GTQ</ion-select-option>
+          <ion-select-option value="GYD">GYD</ion-select-option>
+          <ion-select-option value="HKD">HKD</ion-select-option>
+          <ion-select-option value="HNL">HNL</ion-select-option>
+          <ion-select-option value="HRK">HRK</ion-select-option>
+          <ion-select-option value="HTG">HTG</ion-select-option>
+          <ion-select-option value="HUF">HUF</ion-select-option>
+          <ion-select-option value="IDR">IDR</ion-select-option>
+          <ion-select-option value="ILS">ILS</ion-select-option>
+          <ion-select-option value="IMP">IMP</ion-select-option>
+          <ion-select-option value="INR">INR</ion-select-option>
+          <ion-select-option value="IQD">IQD</ion-select-option>
+          <ion-select-option value="IRR">IRR</ion-select-option>
+          <ion-select-option value="ISK">ISK</ion-select-option>
+          <ion-select-option value="JEP">JEP</ion-select-option>
+          <ion-select-option value="JMD">JMD</ion-select-option>
+          <ion-select-option value="JOD">JOD</ion-select-option>
+          <ion-select-option value="JPY">JPY</ion-select-option>
+          <ion-select-option value="KES">KES</ion-select-option>
+          <ion-select-option value="KGS">KGS</ion-select-option>
+          <ion-select-option value="KHR">KHR</ion-select-option>
+          <ion-select-option value="KMF">KMF</ion-select-option>
+          <ion-select-option value="KPW">KPW</ion-select-option>
+          <ion-select-option value="KRW">KRW</ion-select-option>
+          <ion-select-option value="KWD">KWD</ion-select-option>
+          <ion-select-option value="KYD">KYD</ion-select-option>
+          <ion-select-option value="KZT">KZT</ion-select-option>
+          <ion-select-option value="LAK">LAK</ion-select-option>
+          <ion-select-option value="LBP">LBP</ion-select-option>
+          <ion-select-option value="LKR">LKR</ion-select-option>
+          <ion-select-option value="LRD">LRD</ion-select-option>
+          <ion-select-option value="LSL">LSL</ion-select-option>
+          <ion-select-option value="LVL">LVL</ion-select-option>
+          <ion-select-option value="LYD">LYD</ion-select-option>
+          <ion-select-option value="MAD">MAD</ion-select-option>
+          <ion-select-option value="MDL">MDL</ion-select-option>
+          <ion-select-option value="MGA">MGA</ion-select-option>
+          <ion-select-option value="MKD">MKD</ion-select-option>
+          <ion-select-option value="MMK">MMK</ion-select-option>
+          <ion-select-option value="MNT">MNT</ion-select-option>
+          <ion-select-option value="MOP">MOP</ion-select-option>
+          <ion-select-option value="MRO">MRO</ion-select-option>
+          <ion-select-option value="MUR">MUR</ion-select-option>
+          <ion-select-option value="MVR">MVR</ion-select-option>
+          <ion-select-option value="MWK">MWK</ion-select-option>
+          <ion-select-option value="MXN">MXN</ion-select-option>
+          <ion-select-option value="MYR">MYR</ion-select-option>
+          <ion-select-option value="MZN">MZN</ion-select-option>
+          <ion-select-option value="NAD">NAD</ion-select-option>
+          <ion-select-option value="NGN">NGN</ion-select-option>
+          <ion-select-option value="NIO">NIO</ion-select-option>
+          <ion-select-option value="NOK">NOK</ion-select-option>
+          <ion-select-option value="NPR">NPR</ion-select-option>
+          <ion-select-option value="NZD">NZD</ion-select-option>
+          <ion-select-option value="OMR">OMR</ion-select-option>
+          <ion-select-option value="PAB">PAB</ion-select-option>
+          <ion-select-option value="PEN">PEN</ion-select-option>
+          <ion-select-option value="PGK">PGK</ion-select-option>
+          <ion-select-option value="PHP">PHP</ion-select-option>
+          <ion-select-option value="PKR">PKR</ion-select-option>
+          <ion-select-option value="PLN">PLN</ion-select-option>
+          <ion-select-option value="PYG">PYG</ion-select-option>
+          <ion-select-option value="QAR">QAR</ion-select-option>
+          <ion-select-option value="RON">RON</ion-select-option>
+          <ion-select-option value="RSD">RSD</ion-select-option>
+          <ion-select-option value="RUB">RUB</ion-select-option>
+          <ion-select-option value="RWF">RWF</ion-select-option>
+          <ion-select-option value="SAR">SAR</ion-select-option>
+          <ion-select-option value="SBD">SBD</ion-select-option>
+          <ion-select-option value="SCR">SCR</ion-select-option>
+          <ion-select-option value="SDG">SDG</ion-select-option>
+          <ion-select-option value="SEK">SEK</ion-select-option>
+          <ion-select-option value="SGD">SGD</ion-select-option>
+          <ion-select-option value="SHP">SHP</ion-select-option>
+          <ion-select-option value="SLL">SLL</ion-select-option>
+          <ion-select-option value="SOS">SOS</ion-select-option>
+          <ion-select-option value="SRD">SRD</ion-select-option>
+          <ion-select-option value="STD">STD</ion-select-option>
+          <ion-select-option value="SVC">SVC</ion-select-option>
+          <ion-select-option value="SYP">SYP</ion-select-option>
+          <ion-select-option value="SZL">SZL</ion-select-option>
+          <ion-select-option value="THB">THB</ion-select-option>
+          <ion-select-option value="TJS">TJS</ion-select-option>
+          <ion-select-option value="TMT">TMT</ion-select-option>
+          <ion-select-option value="TND">TND</ion-select-option>
+          <ion-select-option value="TOP">TOP</ion-select-option>
+          <ion-select-option value="TRY">TRY</ion-select-option>
+          <ion-select-option value="TTD">TTD</ion-select-option>
+          <ion-select-option value="TWD">TWD</ion-select-option>
+          <ion-select-option value="TZS">TZS</ion-select-option>
+          <ion-select-option value="UAH">UAH</ion-select-option>
+          <ion-select-option value="UGX">UGX</ion-select-option>
+          <ion-select-option value="USD">USD</ion-select-option>
+          <ion-select-option value="UYU">UYU</ion-select-option>
+          <ion-select-option value="UZS">UZS</ion-select-option>
+          <ion-select-option value="VEF">VEF</ion-select-option>
+          <ion-select-option value="VND">VND</ion-select-option>
+          <ion-select-option value="VUV">VUV</ion-select-option>
+          <ion-select-option value="WST">WST</ion-select-option>
+          <ion-select-option value="XAF">XAF</ion-select-option>
+          <ion-select-option value="XAG">XAG</ion-select-option>
+          <ion-select-option value="XCD">XCD</ion-select-option>
+          <ion-select-option value="XDR">XDR</ion-select-option>
+          <ion-select-option value="XOF">XOF</ion-select-option>
+          <ion-select-option value="XPF">XPF</ion-select-option>
+          <ion-select-option value="YER">YER</ion-select-option>
+          <ion-select-option value="ZAR">ZAR</ion-select-option>
+          <ion-select-option value="ZMK">ZMK</ion-select-option>
+          <ion-select-option value="ZMW">ZMW</ion-select-option>
+          <ion-select-option value="ZWL">ZWL</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h5>to</h5>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+    <ion-col size="12">
+      <ion-label>Target Amount</ion-label>
+      <ion-item>
+        <ion-input inputmode="numeric" type="number" min="0.000001" value="number" placeholder="Enter Amount"></ion-input>
+      </ion-item>
+      <ion-label>Target Currency</ion-label>
+      <ion-item>
+        <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
+          <ion-select-option value="AED">AED</ion-select-option>
+          <ion-select-option value="AFN">AFN</ion-select-option>
+          <ion-select-option value="ALL">ALL</ion-select-option>
+          <ion-select-option value="AMD">AMD</ion-select-option>
+          <ion-select-option value="ANG">ANG</ion-select-option>
+          <ion-select-option value="AOA">AOA</ion-select-option>
+          <ion-select-option value="ARS">ARS</ion-select-option>
+          <ion-select-option value="AUD">AUD</ion-select-option>
+          <ion-select-option value="AWG">AWD</ion-select-option>
+          <ion-select-option value="AZN">AZN</ion-select-option>
+          <ion-select-option value="BAM">BAM</ion-select-option>
+          <ion-select-option value="BBD">BBD</ion-select-option>
+          <ion-select-option value="BDT">BDT</ion-select-option>
+          <ion-select-option value="BGN">BGN</ion-select-option>
+          <ion-select-option value="BHD">BHD</ion-select-option>
+          <ion-select-option value="BIF">BIF</ion-select-option>
+          <ion-select-option value="BMD">BMD</ion-select-option>
+          <ion-select-option value="BND">BND</ion-select-option>
+          <ion-select-option value="BOB">BOB</ion-select-option>
+          <ion-select-option value="BRL">BRL</ion-select-option>
+          <ion-select-option value="BSD">BSD</ion-select-option>
+          <ion-select-option value="BTC">BTC</ion-select-option>
+          <ion-select-option value="BTN">BTN</ion-select-option>
+          <ion-select-option value="BWP">BWP</ion-select-option>
+          <ion-select-option value="BYN">BYN</ion-select-option>
+          <ion-select-option value="BYR">BYR</ion-select-option>
+          <ion-select-option value="BZD">BZD</ion-select-option>
+          <ion-select-option value="CAD">CAD</ion-select-option>
+          <ion-select-option value="CDF">CDF</ion-select-option>
+          <ion-select-option value="CHF">CHF</ion-select-option>
+          <ion-select-option value="CLF">CLF</ion-select-option>
+          <ion-select-option value="CLP">CLP</ion-select-option>
+          <ion-select-option value="CNY">CNY</ion-select-option>
+          <ion-select-option value="COP">COP</ion-select-option>
+          <ion-select-option value="CRC">CRC</ion-select-option>
+          <ion-select-option value="CUC">CUC</ion-select-option>
+          <ion-select-option value="CUP">CUP</ion-select-option>
+          <ion-select-option value="CVE">CVE</ion-select-option>
+          <ion-select-option value="CZK">CZK</ion-select-option>
+          <ion-select-option value="DJF">DJF</ion-select-option>
+          <ion-select-option value="DKK">DKK</ion-select-option>
+          <ion-select-option value="DOP">DOP</ion-select-option>
+          <ion-select-option value="DZD">DZD</ion-select-option>
+          <ion-select-option value="EGP">EGP</ion-select-option>
+          <ion-select-option value="ERN">ERN</ion-select-option>
+          <ion-select-option value="ETB">ETB</ion-select-option>
+          <ion-select-option value="EUR">EUR</ion-select-option>
+          <ion-select-option value="FJD">FJD</ion-select-option>
+          <ion-select-option value="FKP">FKP</ion-select-option>
+          <ion-select-option value="GBP">GBP</ion-select-option>
+          <ion-select-option value="GEL">GEL</ion-select-option>
+          <ion-select-option value="GGP">GGP</ion-select-option>
+          <ion-select-option value="GHS">GHS</ion-select-option>
+          <ion-select-option value="GIP">GIP</ion-select-option>
+          <ion-select-option value="GMD">GMD</ion-select-option>
+          <ion-select-option value="GNF">GNF</ion-select-option>
+          <ion-select-option value="GTQ">GTQ</ion-select-option>
+          <ion-select-option value="GYD">GYD</ion-select-option>
+          <ion-select-option value="HKD">HKD</ion-select-option>
+          <ion-select-option value="HNL">HNL</ion-select-option>
+          <ion-select-option value="HRK">HRK</ion-select-option>
+          <ion-select-option value="HTG">HTG</ion-select-option>
+          <ion-select-option value="HUF">HUF</ion-select-option>
+          <ion-select-option value="IDR">IDR</ion-select-option>
+          <ion-select-option value="ILS">ILS</ion-select-option>
+          <ion-select-option value="IMP">IMP</ion-select-option>
+          <ion-select-option value="INR">INR</ion-select-option>
+          <ion-select-option value="IQD">IQD</ion-select-option>
+          <ion-select-option value="IRR">IRR</ion-select-option>
+          <ion-select-option value="ISK">ISK</ion-select-option>
+          <ion-select-option value="JEP">JEP</ion-select-option>
+          <ion-select-option value="JMD">JMD</ion-select-option>
+          <ion-select-option value="JOD">JOD</ion-select-option>
+          <ion-select-option value="JPY">JPY</ion-select-option>
+          <ion-select-option value="KES">KES</ion-select-option>
+          <ion-select-option value="KGS">KGS</ion-select-option>
+          <ion-select-option value="KHR">KHR</ion-select-option>
+          <ion-select-option value="KMF">KMF</ion-select-option>
+          <ion-select-option value="KPW">KPW</ion-select-option>
+          <ion-select-option value="KRW">KRW</ion-select-option>
+          <ion-select-option value="KWD">KWD</ion-select-option>
+          <ion-select-option value="KYD">KYD</ion-select-option>
+          <ion-select-option value="KZT">KZT</ion-select-option>
+          <ion-select-option value="LAK">LAK</ion-select-option>
+          <ion-select-option value="LBP">LBP</ion-select-option>
+          <ion-select-option value="LKR">LKR</ion-select-option>
+          <ion-select-option value="LRD">LRD</ion-select-option>
+          <ion-select-option value="LSL">LSL</ion-select-option>
+          <ion-select-option value="LVL">LVL</ion-select-option>
+          <ion-select-option value="LYD">LYD</ion-select-option>
+          <ion-select-option value="MAD">MAD</ion-select-option>
+          <ion-select-option value="MDL">MDL</ion-select-option>
+          <ion-select-option value="MGA">MGA</ion-select-option>
+          <ion-select-option value="MKD">MKD</ion-select-option>
+          <ion-select-option value="MMK">MMK</ion-select-option>
+          <ion-select-option value="MNT">MNT</ion-select-option>
+          <ion-select-option value="MOP">MOP</ion-select-option>
+          <ion-select-option value="MRO">MRO</ion-select-option>
+          <ion-select-option value="MUR">MUR</ion-select-option>
+          <ion-select-option value="MVR">MVR</ion-select-option>
+          <ion-select-option value="MWK">MWK</ion-select-option>
+          <ion-select-option value="MXN">MXN</ion-select-option>
+          <ion-select-option value="MYR">MYR</ion-select-option>
+          <ion-select-option value="MZN">MZN</ion-select-option>
+          <ion-select-option value="NAD">NAD</ion-select-option>
+          <ion-select-option value="NGN">NGN</ion-select-option>
+          <ion-select-option value="NIO">NIO</ion-select-option>
+          <ion-select-option value="NOK">NOK</ion-select-option>
+          <ion-select-option value="NPR">NPR</ion-select-option>
+          <ion-select-option value="NZD">NZD</ion-select-option>
+          <ion-select-option value="OMR">OMR</ion-select-option>
+          <ion-select-option value="PAB">PAB</ion-select-option>
+          <ion-select-option value="PEN">PEN</ion-select-option>
+          <ion-select-option value="PGK">PGK</ion-select-option>
+          <ion-select-option value="PHP">PHP</ion-select-option>
+          <ion-select-option value="PKR">PKR</ion-select-option>
+          <ion-select-option value="PLN">PLN</ion-select-option>
+          <ion-select-option value="PYG">PYG</ion-select-option>
+          <ion-select-option value="QAR">QAR</ion-select-option>
+          <ion-select-option value="RON">RON</ion-select-option>
+          <ion-select-option value="RSD">RSD</ion-select-option>
+          <ion-select-option value="RUB">RUB</ion-select-option>
+          <ion-select-option value="RWF">RWF</ion-select-option>
+          <ion-select-option value="SAR">SAR</ion-select-option>
+          <ion-select-option value="SBD">SBD</ion-select-option>
+          <ion-select-option value="SCR">SCR</ion-select-option>
+          <ion-select-option value="SDG">SDG</ion-select-option>
+          <ion-select-option value="SEK">SEK</ion-select-option>
+          <ion-select-option value="SGD">SGD</ion-select-option>
+          <ion-select-option value="SHP">SHP</ion-select-option>
+          <ion-select-option value="SLL">SLL</ion-select-option>
+          <ion-select-option value="SOS">SOS</ion-select-option>
+          <ion-select-option value="SRD">SRD</ion-select-option>
+          <ion-select-option value="STD">STD</ion-select-option>
+          <ion-select-option value="SVC">SVC</ion-select-option>
+          <ion-select-option value="SYP">SYP</ion-select-option>
+          <ion-select-option value="SZL">SZL</ion-select-option>
+          <ion-select-option value="THB">THB</ion-select-option>
+          <ion-select-option value="TJS">TJS</ion-select-option>
+          <ion-select-option value="TMT">TMT</ion-select-option>
+          <ion-select-option value="TND">TND</ion-select-option>
+          <ion-select-option value="TOP">TOP</ion-select-option>
+          <ion-select-option value="TRY">TRY</ion-select-option>
+          <ion-select-option value="TTD">TTD</ion-select-option>
+          <ion-select-option value="TWD">TWD</ion-select-option>
+          <ion-select-option value="TZS">TZS</ion-select-option>
+          <ion-select-option value="UAH">UAH</ion-select-option>
+          <ion-select-option value="UGX">UGX</ion-select-option>
+          <ion-select-option value="USD">USD</ion-select-option>
+          <ion-select-option value="UYU">UYU</ion-select-option>
+          <ion-select-option value="UZS">UZS</ion-select-option>
+          <ion-select-option value="VEF">VEF</ion-select-option>
+          <ion-select-option value="VND">VND</ion-select-option>
+          <ion-select-option value="VUV">VUV</ion-select-option>
+          <ion-select-option value="WST">WST</ion-select-option>
+          <ion-select-option value="XAF">XAF</ion-select-option>
+          <ion-select-option value="XAG">XAG</ion-select-option>
+          <ion-select-option value="XCD">XCD</ion-select-option>
+          <ion-select-option value="XDR">XDR</ion-select-option>
+          <ion-select-option value="XOF">XOF</ion-select-option>
+          <ion-select-option value="XPF">XPF</ion-select-option>
+          <ion-select-option value="YER">YER</ion-select-option>
+          <ion-select-option value="ZAR">ZAR</ion-select-option>
+          <ion-select-option value="ZMK">ZMK</ion-select-option>
+          <ion-select-option value="ZMW">ZMW</ion-select-option>
+          <ion-select-option value="ZWL">ZWL</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-button color="primary" margin (click)="addToCue()">Add to Currency Cue</ion-button>
+  </ion-row>
+</ion-grid>
+</ion-content>

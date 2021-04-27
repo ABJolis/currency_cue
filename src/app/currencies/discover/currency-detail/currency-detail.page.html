@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/currencies/tabs/discover"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Currency Information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" *ngIf="this.currency">
+  <h1>{{ this.currency.countryName }} {{ this.currency.currencyCode }}</h1>
+<ion-grid>
+<ion-row>
+  <h2>{{ this.currency.name }}</h2>
+  <ion-col size="12" size-sm="6" class="ion-text-center">
+    <ion-card>
+      <ion-img [src]="this.currency.flag"></ion-img>
+    </ion-card>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+    <h3>Price to GBP: </h3>
+    <h3>{{this.exchange.exchangeRate}}</h3>
+  </ion-col>
+</ion-row>
+
+<ion-button color="primary" margin (click)="onTrackCurrency()">Track Currency</ion-button>
