@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, pipe } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, catchError } from 'rxjs/operators';
 import { Currency, Exchange } from './currencies/currency.model';
 import { environment } from '../environments/environment';
 
@@ -39,8 +39,20 @@ export class CurrencyApiService {
     return this.http.get(
       `${this.currUrl}${from}_${to}&apiKey=${environment.API_KEY}`
       )
-      .pipe(map(exRate => Exchange.parse(exRate)));
-}
+      .pipe(map(exRate => {
+        console.log('exRate: ', exRate);
+        return Exchange.parse(exRate);
+      }));
+    }
+
+    calculateTargetCurrency(from: string, to: string, amount: number = 1) {
+      return this.http.get(
+        `${to} = ${from} / (this.exRate)`
+      )
+      .pipe(map(fromCurr => Exchange.parse(fromCurr)));
+    }
+
+
 }
 
 

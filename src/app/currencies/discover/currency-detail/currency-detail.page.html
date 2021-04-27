@@ -18,7 +18,7 @@
   </ion-col>
 </ion-row>
 
-<ion-row>
+<ion-row *ngIf="exchange">
   <ion-col class="ion-text-center">
     <h3>{{this.exchange.exchangeRate}} {{this.currency.currencyCode}} = 1.00 GBP</h3>
     <ion-button color="primary" margin (click)="onTrackCurrency()">Track Currency</ion-button>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavController, ActionSheetController, ModalController } from '@ionic/angular';
 
@@ -36,8 +36,9 @@ export class CurrencyDetailPage implements OnInit {
         paramMap.get('currencyCode'))
         .subscribe(c => {
           this.currency = c;
-          this.currencyService.getExchangeRate(this.currency.currencyCode, 'USD')
+          this.currencyService.getExchangeRate(this.currency.currencyCode, 'GBP')
           .subscribe(x => this.exchange = x);
+
         });
   });
 }
