@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth.service';
 
 import { Router } from '@angular/router';
+//import { logo } from '../../../assets/icon/logo';
 
 @Component({
   selector: 'app-auth',
@@ -17,7 +18,7 @@ export class AuthPage implements OnInit {
 
   onLogin(){
     this.authService.login();
-    //this.router.navigateByUrl('/currencies/tabs/manage/');
+    //this.router.navigateByUrl('../../assets/icon');
   }
 
 }

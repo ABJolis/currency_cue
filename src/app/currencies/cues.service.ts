@@ -12,7 +12,7 @@ export class CuesService {
 
   private _cues: Cue[] = [
     {
-      cueId: 'Krona-Escude',
+      cueId: 'Krona-Ngultrum',
       base: {
         countryName: 'Sweden',
         currencyCode: 'SEK',

@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { CurrencyDetailPageRoutingModule } from './currency-detail-routing.module';
 import { CurrencyDetailPage } from './currency-detail.page';
+import { TrackCurrencyComponent } from '../../../currencies/manage/track-currency/track-currency.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,7 @@ const routes: Routes = [
     CurrencyDetailPageRoutingModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [CurrencyDetailPage]
+  declarations: [CurrencyDetailPage, TrackCurrencyComponent],
+  entryComponents: [TrackCurrencyComponent]
 })
 export class CurrencyDetailPageModule {}
