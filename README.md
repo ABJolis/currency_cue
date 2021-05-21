@@ -6,7 +6,7 @@ CurrencyCue is a mobile and web app for comparing exchange-rate changes.
 
 CurrencyCue pulls from an external API to deliver exchange-rate information on 179 global currencies. Users may track exchange rates in isolation, or by pairs of currencies. The app is designed to work on the web, as well as on iOS and Android mobile devices.
 
-![CurrencyCue User Flow]<img width="500" src="https://raw.githubusercontent.com/ABJolis/currency_cue/master/src/assets/Untitled%20design%20(5).png">
+![CurrencyCue User Flow](https://raw.githubusercontent.com/ABJolis/currency_cue/master/src/assets/Untitled%20design%20(5).png)
 
 ## Installation
 Use the package manager [npm](https://npmjs.com/) to install dependencies for CurrencyCue. From inside the project folder, run the following command:
