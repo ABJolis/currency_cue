@@ -18,7 +18,6 @@ To start the project in Angular's development server, run
 ```
 npm start
 ```
-and navigate to [localhost:4200](http://localhost:4200/currencies).
 
 CurrencyCue requires a private API key to perform its currency-conversion functions. Users can obtain the key at [currencyconverterapi](https://www.currencyconverterapi.com/).
 
