@@ -8,22 +8,16 @@ CurrencyCue pulls from an external API to deliver exchange-rate information on 1
 
 ![CurrencyCue User Flow](https://github.com/ABJolis/currency_cue/raw/master/src/assets/Untitled%20design%20(11).png)
 
-## Installation
-Use the package manager [npm](https://npmjs.com/) to install dependencies for CurrencyCue. From inside the project folder, run the following command:
+## Getting Started
+1. Use the package manager [npm](https://npmjs.com/) to install dependencies for CurrencyCue. From inside the project folder, run the following command:
 
 ```
 npm install
 ```
 
-To start the project in Angular's development server, run 
+2. Obtain the private API key necessary for CurrencyCue's conversion function at [currencyconverterapi](https://www.currencyconverterapi.com/).
 
-```
-npm start
-```
-
-CurrencyCue requires a private API key to perform its currency-conversion functions. Users can obtain the key at [currencyconverterapi](https://www.currencyconverterapi.com/).
-
-Inside the project folder, create an environment directory that includes an environment.ts file with the private API key:
+3. Inside the project folder, create an environment directory that includes an environment.ts file with the private API key:
 ```
 export const environment = {
   production: false,
@@ -32,6 +26,13 @@ export const environment = {
 ```
 
 If the file is named differently, make sure to included it in the .gitignore file.
+
+4. Start the project in Angular's development server by running
+```
+npm start
+```
+
+5. Navigate to [localhost:4200](http://localhost:4200/currencies/)
 
 # Tech Stack
 
