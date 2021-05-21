@@ -2,7 +2,7 @@
 
 CurrencyCue is a mobile and web app for comparing exchange-rate changes.
 
-# Description
+## Description
 
 CurrencyCue pulls from an external API to deliver exchange-rate information on 179 global currencies. Users may track exchange rates in isolation, or by pairs of currencies. The app is designed to work on the web, as well as on iOS and Android mobile devices.
 
