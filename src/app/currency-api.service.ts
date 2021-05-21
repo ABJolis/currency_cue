@@ -14,7 +14,6 @@ export class CurrencyApiService {
 
   private url = 'https://restcountries.eu/rest/v2';
 
-  //private currUrl = 'http://free.currconv.com/api/v7/convert?q=';
   private currUrl = 'https://prepaid.currconv.com/api/v7/convert?q=';
 
   constructor(private http: HttpClient) { }
@@ -30,10 +29,6 @@ export class CurrencyApiService {
     return this.http.get(`${this.url}/alpha/${code}`)
       .pipe(map(country => Currency.parse(country)));
   }
-
-  // addToCue(currency: Currency): Observable<Currency> {
-  //   return this.http.post<Currency>(this.getCurrency, currency, this.http);
-  // }
 
    getExchangeRate(from: string, to: string) {
      console.log('from and to: ', from, to);
