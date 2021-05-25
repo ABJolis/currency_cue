@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CurrencyApiService } from '../../currency-api.service';
-import { Currency } from '/Users/annej/CurrencyCue/src/app/currencies/currency.model';
+import { Currency } from '../../currencies/currency.model';
 
 
 @Component({

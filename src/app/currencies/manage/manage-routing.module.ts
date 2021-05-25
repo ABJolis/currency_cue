@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 import { ManagePage } from './manage.page';
-import { AuthGuard } from '/Users/annej/CurrencyCue/src/app/auth/auth.guard';
+import { AuthGuard } from '../../auth/auth.guard';
 
 const routes: Routes = [
   {
