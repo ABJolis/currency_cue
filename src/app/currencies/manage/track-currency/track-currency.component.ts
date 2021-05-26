@@ -7,6 +7,7 @@ import { element } from 'protractor';
 import { CurrencyApiService } from '../../../currency-api.service';
 import { Exchange } from '../../currency.model';
 import { Currency } from '../../currency.model';
+import currencyCodes from '../../manage/currencyCodes.json';
 
 
 @Component({
