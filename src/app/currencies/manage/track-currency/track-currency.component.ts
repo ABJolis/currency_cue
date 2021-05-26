@@ -26,6 +26,7 @@ export class TrackCurrencyComponent implements OnInit {
 
   constructor(
     private currencyService: CurrencyApiService,
+    private modalCtrl: ModalController,
     ) {}
 
   ngOnInit() {
@@ -48,12 +49,12 @@ handleSourceChange($event) {
 handleSourceInput($event) {
   this.baseAmount = $event.target.value;
 }
+
+onCancel() {
+  this.modalCtrl.dismiss(null, 'cancel');
 }
 
-
-  // onCancel() {
-  //   this.modalCtrl.dismiss(null, 'cancel');
-  // }
+}
 
   // onAddCue() {
   //   this.modalCtrl.dismiss({message: 'This will do stuff eventually!'}, 'confirm');
