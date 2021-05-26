@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ModalController, NavController } from '@ionic/angular';
+import { element } from 'protractor';
 
 import { CurrencyApiService } from '../../../currency-api.service';
 import { Exchange } from '../../currency.model';
@@ -22,6 +23,7 @@ export class TrackCurrencyComponent implements OnInit {
   exchange: Exchange;
   targetAmount: string;
   baseAmount: string;
+  selectedCurrency: Currency;
 
 
   constructor(
@@ -29,9 +31,11 @@ export class TrackCurrencyComponent implements OnInit {
     private modalCtrl: ModalController,
     ) {}
 
-  ngOnInit() {
-    console.log('What is up?');
-    }
+ngOnInit() {
+  this.currencyService.getAllCountries().subscribe(data => {
+    data.forEach((country) => console.log(country.currencyCode));
+  });
+}
 
 handleChange($event) {
   console.log('this.selected: ', this.selected);
@@ -55,7 +59,6 @@ onCancel() {
 }
 
 }
-
   // onAddCue() {
   //   this.modalCtrl.dismiss({message: 'This will do stuff eventually!'}, 'confirm');
   // }
