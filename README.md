@@ -1,6 +1,6 @@
 # CurrencyCue
 
-CurrencyCue is a mobile and web app for comparing exchange-rate changes.
+CurrencyCue is a mobile and web app for tracking exchange-rate changes.
 
 ## Description
 
