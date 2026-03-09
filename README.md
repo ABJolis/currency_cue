@@ -142,18 +142,25 @@ If you encounter runtime errors:
 1. Check the browser developer console for error messages.
 
 2. Confirm that your Node.js version matches the recommended version for the project.
-
-3. Reinstall dependencies if needed.
+   Check your installed Node.js version:
+   ```
+   node -v
+   ```
+   CurrencyCue works best with Node.js version 14 or later.
+   If needed, install or switch Node versions using Node Version Manager (nvm):
+   ```
+   nvm install 14
+   nvm use 14
+   ```
+5. Reinstall dependencies if needed.
 
 #### Still having trouble?
 
 If the problem persists, please open an issue in the project repository and include:
 
-* a description of the problem
-
-* the steps to reproduce it
-
-* relevant error messages or screenshots
+- a description of the problem
+- the steps to reproduce it
+- relevant error messages or screenshots
 
 This will help diagnose the issue more quickly.
 
