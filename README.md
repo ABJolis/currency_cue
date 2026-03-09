@@ -1,6 +1,6 @@
 # CurrencyCue
 
-CurrencyCue is a mobile and web app for tracking exchange-rate changes.
+CurrencyCue is a web and mobile application that tracks global currency exchange rates and allows users to monitor changes between currency pairs in real time.
 
 ## Description
 
@@ -8,7 +8,10 @@ CurrencyCue pulls from an external API to deliver exchange-rate information on 1
 
 ![CurrencyCue User Flow](<https://github.com/ABJolis/currency_cue/raw/master/src/assets/Untitled%20design%20(11).png>)
 
-## Getting Started
+## Developer Setup Guide — CurrencyCue App
+Documentation for installing, configuring, and running a web/mobile currency tracking application built with Angular and Ionic.
+
+### Getting Started
 
 1. Clone this repo:
 
@@ -44,7 +47,7 @@ npm start
 
 6. Navigate to [localhost:4200](http://localhost:4200/currencies/)
 
-# Tech Stack
+## Tech Stack
 
 CurrencyCue was built with the following technologies:
 
